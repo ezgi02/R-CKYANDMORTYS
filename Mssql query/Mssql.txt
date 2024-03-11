@@ -1,0 +1,30 @@
+CREATE TABLE Characters (
+    Id INT PRIMARY KEY,
+    Name NVARCHAR(255),
+    Status NVARCHAR(50),
+    Species NVARCHAR(100),
+    Gender NVARCHAR(50),
+    OriginId INT,
+    LocationId INT,
+    ImageUrl NVARCHAR(MAX),
+    FOREIGN KEY (OriginId) REFERENCES Locations(Id),
+    FOREIGN KEY (LocationId) REFERENCES Locations(Id)
+);
+
+CREATE TABLE Locations (
+    Id INT PRIMARY KEY,
+    Name NVARCHAR(255)
+);
+
+CREATE TABLE Characters (
+    Id INT PRIMARY KEY,
+    Name NVARCHAR(255),
+    Status NVARCHAR(50),
+    Species NVARCHAR(100),
+    Gender NVARCHAR(50),
+    OriginId INT,
+    LocationId INT,
+    ImageUrl NVARCHAR(MAX),
+    FOREIGN KEY (OriginId) REFERENCES Locations(Id),
+    FOREIGN KEY (LocationId) REFERENCES Locations(Id)
+);

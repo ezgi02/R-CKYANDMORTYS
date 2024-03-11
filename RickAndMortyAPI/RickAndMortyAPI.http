@@ -1,0 +1,6 @@
+@RickAndMortyAPI_HostAddress = http://localhost:5223
+
+GET {{RickAndMortyAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
